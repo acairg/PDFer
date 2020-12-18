@@ -11,6 +11,7 @@ import re
 import os
 from PyPDF2 import PdfFileMerger
 # imports ^
+
 ls = os.path.dirname(
 os.path.realpath(__file__))
 #clean slate! delete all PDF before generating 
@@ -30,6 +31,7 @@ for link in soup.find_all('a', href=True):
   os.system("xhtml2pdf " + link['href'])
 os.system('wkhtmltopdf --load-error-handling ignore http:/#ac-gn-menustat *.pdf')
 
+input("Please, press enter to continue.....")
 
 pdfs = [
 f for f in os.listdir(ls)
@@ -45,4 +47,4 @@ if not os.path.exists(path + 'Full Report.pdf'):
 merger.close()
 
 # test url for input prompt
-#https://support.apple.com/en-gb/guide/iphone/toc
+#.     https://support.apple.com/en-gb/guide/iphone/toc
