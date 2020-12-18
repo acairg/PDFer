@@ -1,4 +1,4 @@
-'''<- Dev
+'''
   Jake Pattinson
   PDfer is a meoified web scraper,
   which renders a website to a PDF doc for offline reference.
@@ -44,5 +44,5 @@ if not os.path.exists(path + 'Full Report.pdf'):
     merger.write(path + 'Full Report.pdf')
 merger.close()
 
-# test url for input prompt !!!!!!!!!!!!!!
+# test url for input prompt
 #https://support.apple.com/en-gb/guide/iphone/toc
