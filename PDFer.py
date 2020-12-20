@@ -29,8 +29,6 @@ for link in soup.find_all('a', href=True):
   print(link['href']) 
   os.system("xhtml2pdf " + link['href'])
 os.system('wkhtmltopdf --load-error-handling ignore http:/#ac-gn-menustat *.pdf')
-
-input("Please, press enter to continue.....")
 print(" -----------------------------------------------------------")
 input('    Please, press enter to continue........... ')
 print(" -----------------------------------------------------------")
