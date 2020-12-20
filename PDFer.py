@@ -41,7 +41,8 @@ for i in os.listdir(ls):
         merger.append(i, 'r+b')
 merger.write(ls + 'MergeGuide.pdf')
 merger.close()
-os.remove(os.path.join(ls, f)
+for f in filelist:
+  os.remove(os.path.join(ls, f)
 
 # test url for input prompt
 #.     https://support.apple.com/en-gb/guide/iphone/toc
