@@ -32,19 +32,16 @@ for link in soup.find_all('a', href=True):
 os.system('wkhtmltopdf --load-error-handling ignore http:/#ac-gn-menustat *.pdf')
 
 input("Please, press enter to continue.....")
-
-pdfs = [
-f for f in os.listdir(ls)
-if f.endswith (".pdf")]
-path = ls
-pdf_files = pdfs
+print(" -----------------------------------------------------------")
+input('    Please, press enter to continue........... ')
+print(" -----------------------------------------------------------")
 merger = PdfFileMerger()
-
-for files in pdf_files:
-    PdfFileMerger.append(path + files)
-if not os.path.exists(path + 'Full Report.pdf'):
-    merger.write(path + 'Full Report.pdf')
+for i in os.listdir(ls):
+    if i.endswith('.pdf'):
+        merger.append(i, 'r+b')
+merger.write(ls + 'MergeGuide.pdf')
 merger.close()
+os.remove(os.path.join(ls, f)
 
 # test url for input prompt
 #.     https://support.apple.com/en-gb/guide/iphone/toc
