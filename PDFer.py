@@ -1,7 +1,6 @@
 '''
   Jake Pattinson
-  PDfer is a meoified web scraper,
-  which renders a website to a PDF doc for offline reference.
+  2020-12-19
 '''
 from xhtml2pdf import pisa 
 import pdfkit
